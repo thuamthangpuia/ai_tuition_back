@@ -1,0 +1,6 @@
+{
+  "watch": ["src", "app.ts"],
+  "ext": "ts,js,json",
+  "ignore": ["node_modules"],
+  "exec": "npx tsc && node ./bin/www"
+}
