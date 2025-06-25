@@ -11,7 +11,7 @@ import router from './src/routes/index.ts'
 
 declare module 'express-session' {
   interface SessionData {
-    userId?: string; // or number, depending on your use case
+    userId?: number; 
   }
 }
 

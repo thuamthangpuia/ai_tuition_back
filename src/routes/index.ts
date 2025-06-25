@@ -1,14 +1,16 @@
 import express from 'express';
 
-import { registerUserController, userLoginController, userLogoutController, userProfileController } from '../controllers/UserController.ts';
+import { getUserProfileController, updateUserProfileController } from '../controllers/UserController.ts';
+import { registerUserController, userLoginController, userLogoutController } from '../controllers/authController.ts';
 
 
 var router = express.Router();
 
 router.get('/user/create', registerUserController)
 router.get('/user/login', userLoginController)
-router.get('/user/profile', userProfileController)
+router.get('/user/profile', getUserProfileController)
 router.get('/user/logout',userLogoutController)
+router.get('/user/profile/update',updateUserProfileController)
 
 export default router
 
